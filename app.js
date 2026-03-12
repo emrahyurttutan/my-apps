@@ -499,8 +499,18 @@
       </div>
       <div class="modal-actions">
         <button class="btn-primary" data-action="copy-and-close" data-copy="${command}">Copy Command</button>
-        ${app.downloadUrl ? `<a class="btn-secondary" href="${app.downloadUrl}" target="_blank" rel="noopener">Download .dmg</a>` : ""}
-      </div>`;
+        ${app.downloadUrl ? `<a class="btn-secondary" href="${app.downloadUrl}" target="_blank" rel="noopener">${app.downloadUrl.endsWith(".dmg") || app.downloadUrl.includes(".dmg") ? "Download .dmg" : "Download"}</a>` : ""}
+      </div>
+      ${app.downloadUrl && (app.downloadUrl.endsWith(".dmg") || app.downloadUrl.includes(".dmg")) ? `
+      <div style="margin-top:14px;font-size:12px;color:var(--text-tertiary);line-height:1.5">
+        If macOS blocks the app on first launch, run:
+        <div class="brew-command" style="margin-top:8px;font-size:12px;padding:8px 12px" data-copy="xattr -cr /Applications/${app.name}.app">
+          <span class="prompt">$</span>
+          <span class="cmd">xattr -cr /Applications/${app.name}.app</span>
+          <span class="copy-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
+        </div>
+      </div>` : ""}
+    `;
 
     overlay.style.display = "flex";
     requestAnimationFrame(() => overlay.classList.add("visible"));
