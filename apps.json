@@ -1,8 +1,8 @@
 {
   "store": {
-    "name": "FKA Apps",
+    "name": "Appétit",
     "developer": "Fatih Kadir Akin",
-    "tagline": "Apps by Fatih Kadir Akin",
+    "tagline": "Bon appétit for apps.",
     "github": "https://github.com/f"
   },
   "featured": [
@@ -383,6 +383,37 @@
       "screenshots": [
         "https://raw.githubusercontent.com/f/git-rewrite-commits/master/git-rewrite-commits.png"
       ]
+    },
+    {
+      "id": "appetit",
+      "name": "Appétit",
+      "subtitle": "Bon Appétit for Apps",
+      "description": "An Apple App Store-inspired catalog of free, tiny apps built with agentic engineering and vibecoding. Pure HTML/CSS/JS — no frameworks, no build step.",
+      "longDescription": "Appétit is an open-source, JSON-driven app store clone that showcases your projects in a beautiful, browsable catalog. Features a dark/light theme, sidebar navigation, featured carousel, app detail pages with screenshots, brew/npx install modals, instant search, and GitHub star counts. All content lives in a single apps.json file — edit it and deploy. Built entirely with vanilla HTML, CSS, and JS using agentic engineering and vibecoding. No frameworks, no build step, deploys anywhere as static files.",
+      "icon": null,
+      "iconEmoji": "🏪",
+      "iconStyle": {},
+      "category": [
+        "web"
+      ],
+      "platform": "Web",
+      "price": "Free",
+      "github": "https://github.com/f/apps",
+      "homepage": "https://apps.fka.dev",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "requirements": "Any modern browser",
+      "features": [
+        "Apple App Store-inspired UI",
+        "JSON-driven — all content from apps.json",
+        "Dark and light theme with system preference",
+        "Featured carousel, app cards, detail pages",
+        "Brew / npx install modals with clipboard copy",
+        "Zero dependencies — pure HTML/CSS/JS",
+        "Built with agentic engineering and vibecoding"
+      ],
+      "screenshots": []
     }
   ]
 }
