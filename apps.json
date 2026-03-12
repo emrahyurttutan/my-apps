@@ -1,4 +1,5 @@
 {
+  "$schema": "https://wvw.dev/apps.schema.json",
   "store": {
     "name": "Appétit",
     "developer": "Fatih Kadir Akin",
