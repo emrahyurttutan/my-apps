@@ -3,36 +3,47 @@ use tauri::WebviewWindowBuilder;
 
 const INJECT_CSS_JS: &str = r#"
 (function() {
-  const style = document.createElement('style');
-  style.textContent = `
-    body, body * {
-      -webkit-user-select: none !important;
-      user-select: none !important;
+  var css = "body, body * { -webkit-user-select: none !important; user-select: none !important; } " +
+    "input, textarea, [contenteditable=\"true\"] { -webkit-user-select: text !important; user-select: text !important; } " +
+    ".sidebar-brand { display: none !important; } " +
+    ".sidebar-header { padding-top: 48px !important; }";
+
+  function injectStyle() {
+    if (document.head) {
+      var s = document.createElement("style");
+      s.textContent = css;
+      document.head.appendChild(s);
+      return true;
     }
-    input, textarea, [contenteditable="true"] {
-      -webkit-user-select: text !important;
-      user-select: text !important;
-    }
-    .sidebar-brand {
-      display: none !important;
-    }
-    .sidebar-header {
-      padding-top: 48px !important;
-    }
-  `;
-  document.head.appendChild(style);
+    return false;
+  }
+  if (!injectStyle()) {
+    document.addEventListener("DOMContentLoaded", injectStyle);
+    new MutationObserver(function(_, obs) {
+      if (injectStyle()) obs.disconnect();
+    }).observe(document.documentElement, { childList: true });
+  }
 
   function markDragRegions() {
-    var selectors = ['.sidebar-brand', '.sidebar-header', '.mobile-topbar'];
+    var selectors = [".sidebar", ".mobile-topbar"];
     for (var i = 0; i < selectors.length; i++) {
       var els = document.querySelectorAll(selectors[i]);
       for (var j = 0; j < els.length; j++) {
-        els[j].setAttribute('data-tauri-drag-region', '');
+        els[j].setAttribute("data-tauri-drag-region", "");
       }
     }
   }
-  markDragRegions();
-  new MutationObserver(markDragRegions).observe(document.body, { childList: true, subtree: true });
+
+  function onReady() {
+    markDragRegions();
+    new MutationObserver(markDragRegions).observe(document.body, { childList: true, subtree: true });
+  }
+
+  if (document.body) {
+    onReady();
+  } else {
+    document.addEventListener("DOMContentLoaded", onReady);
+  }
 
   var _origOpen = window.open;
   window.open = function(url, target) {
@@ -40,7 +51,7 @@ const INJECT_CSS_JS: &str = r#"
       try {
         var u = new URL(url, window.location.href);
         var host = u.hostname;
-        if (host !== 'wvw.dev' && host !== 'www.wvw.dev') {
+        if (host !== "wvw.dev" && host !== "www.wvw.dev") {
           window.location.href = u.href;
           return null;
         }
@@ -49,8 +60,8 @@ const INJECT_CSS_JS: &str = r#"
     return _origOpen.apply(this, arguments);
   };
 
-  document.addEventListener('click', function(e) {
-    var brand = e.target.closest('.sidebar-brand a, .wvw-badge');
+  document.addEventListener("click", function(e) {
+    var brand = e.target.closest(".sidebar-brand a, .wvw-badge");
     if (brand) {
       e.preventDefault();
       e.stopPropagation();
@@ -61,7 +72,7 @@ const INJECT_CSS_JS: &str = r#"
       try {
         var u = new URL(a.href, window.location.href);
         var host = u.hostname;
-        if (host !== 'wvw.dev' && host !== 'www.wvw.dev') {
+        if (host !== "wvw.dev" && host !== "www.wvw.dev") {
           e.preventDefault();
           e.stopPropagation();
           window.location.href = u.href;
