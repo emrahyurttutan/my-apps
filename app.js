@@ -803,11 +803,11 @@
     if (!menuBtn || !backBtn) return;
 
     if (currentApp) {
-      menuBtn.style.display = "none";
-      backBtn.style.display = "flex";
+      menuBtn.classList.add("hidden");
+      backBtn.classList.remove("hidden");
     } else {
-      menuBtn.style.display = "flex";
-      backBtn.style.display = "none";
+      menuBtn.classList.remove("hidden");
+      backBtn.classList.add("hidden");
     }
   }
 
@@ -816,6 +816,7 @@
     const backBtn = $("#mobileBackBtn");
     const sidebar = $("#sidebar");
     const overlay = $("#sidebarOverlay");
+    const scroll = $("#contentScroll");
     if (!menuBtn || !sidebar || !overlay) return;
 
     menuBtn.addEventListener("click", () => {
@@ -831,6 +832,25 @@
     backBtn.addEventListener("click", () => {
       navigate(currentView);
     });
+
+    let lastScrollY = 0;
+    let fadeTimer = null;
+    scroll.addEventListener("scroll", () => {
+      const y = scroll.scrollTop;
+      if (y > lastScrollY && y > 60) {
+        menuBtn.classList.add("faded");
+        backBtn.classList.add("faded");
+      } else {
+        menuBtn.classList.remove("faded");
+        backBtn.classList.remove("faded");
+      }
+      lastScrollY = y;
+      clearTimeout(fadeTimer);
+      fadeTimer = setTimeout(() => {
+        menuBtn.classList.remove("faded");
+        backBtn.classList.remove("faded");
+      }, 1500);
+    }, { passive: true });
   }
 
   function bindThemeToggle() {
