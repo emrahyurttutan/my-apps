@@ -1,138 +1,91 @@
-<p align="center">
-  <img src="logo.svg" width="128" height="128" alt="Appétit">
-</p>
+# My Apps — Emrah Yurttutan
 
-<h1 align="center">Appétit</h1>
+Emrah Yurttutan tarafından geliştirilen uygulamalar & araçlar.
 
-<p align="center">
-  <em>Bon appétit for apps.</em><br>
-  An App Store-inspired catalog for your projects — powered by a single JSON file.
-</p>
+Appétit tarafından güçlendirilen kişisel uygulama katalogu — Fatih Kadir Akın'ın (FKA) App Store'dan ilham alan açık kaynak katalogu.
 
-<p align="center">
-  <a href="https://apps.fka.dev">Live Demo</a> ·
-  <a href="#quick-start">Quick Start</a> ·
-  <a href="#make-it-yours">Make It Yours</a>
-</p>
+**Live** · [apps.yurttutan.net](https://apps.yurttutan.net) · **Kaynak:** [Appétit](https://github.com/fka/appetit)
 
 ---
 
-Appétit is a beautiful, browsable app catalog that looks and feels like the Apple App Store. It's built entirely with vanilla HTML, CSS, and JS — no frameworks, no build step, no dependencies. Just edit `apps.json` and deploy.
+Bu repo, Fatih Kadir Akın'ın (FKA) [Appétit](https://github.com/fka/appetit) projesinin bir fork'udur; Emrah Yurttutan'ın kişisel uygulama katalogu olarak özelleştirilmiştir. Framework, UI ve mimari için tüm kredi FKA'ya aittir. Bu fork yalnızca uygulama verisi, marka ve kategori yapılandırmasını değiştirmektedir.
 
-## Features
+Appétit, Apple App Store görünümünde güzel ve gezinilebilir bir uygulama katalogu. Tamamen vanilla HTML, CSS ve JS ile inşa edilmiş — framework yok, build adımı yok, bağımlılık yok. Sadece `apps.json` dosyasını düzenle ve deploy et.
 
-- **App Store UI** — Sidebar navigation, featured carousel, app cards, detail pages with screenshots
-- **Dark & Light themes** — System preference detection with manual toggle, persisted in localStorage
-- **JSON-driven** — All apps, categories, and featured items defined in a single `apps.json`
-- **Install modals** — `brew install` and `npx` commands with one-click copy to clipboard
-- **Categories** — macOS, Web, CLI, Developer Tools, Productivity (or define your own)
-- **Search** — Instant client-side filtering across names, descriptions, and features
-- **GitHub stats** — Live star and fork counts, updatable with the included `update-stats.sh` script
-- **Responsive** — Desktop sidebar collapses on mobile
-- **Zero dependencies** — Pure HTML/CSS/JS, deploys anywhere as static files
+## Uygulamalar
 
-## Quick Start
+| Uygulama                                                                                                                    | Kategori                  | Platform      |
+| --------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------- |
+| [Ehliyet Sınav Soruları](https://apps.apple.com/tr/app/ehliyet-s%C4%B1nav-sorular%C4%B1-2026-1/id1435728653)                | Education                 | iOS & Android |
+| [KPSS Deneme Sınavları](https://apps.apple.com/tr/app/kpss-2025-deneme-s%C4%B1navlar%C4%B1-%C3%A7%C3%B6z/id1482779937)      | Education                 | iOS & Android |
+| [Tarih Altın Bilgiler](https://apps.apple.com/tr/app/tarih-alt%C4%B1n-bilgiler/id1497468191)                                | Education                 | iOS & Android |
+| [Prayer Times & Qibla](https://apps.apple.com/app/id6450932588)                                                             | Lifestyle                 | iOS & Android |
+| [Efsun: Kahve Falı & Rüya](https://play.google.com/store/apps/details?id=com.appasoft.efsunkfrt)                            | Lifestyle & Entertainment | iOS & Android |
+| [Kadın Sağlığı & Güvenlik](https://apps.apple.com/tr/app/kad%C4%B1n-sa%C4%9Fl%C4%B1%C4%9F%C4%B1-g%C3%BCvenlik/id6756342991) | Health & Fitness          | iOS           |
+| [Bitki Sulama: Bakım ve Takip](https://apps.apple.com/tr/app/bitki-sulama-bak%C4%B1m-ve-takip/id6755485267)                 | Lifestyle & Productivity  | iOS & Android |
+| [Derdini Dök](https://apps.apple.com/tr/app/derdini-d%C3%B6k-anonim-payla%C5%9F%C4%B1m/id6755607825)                        | Lifestyle                 | iOS & Android |
+| [Çizmeli Kedi Veteriner](https://apps.apple.com/tr/app/%C3%A7izmeli-kedi-veteriner/id6759364103)                            | Lifestyle                 | iOS & Android |
+
+## Dosya Yapısı
+
+```
+├── index.html          Ana HTML
+├── style.css           Stiller (dark + light tema)
+├── app.js              Routing, rendering, carousel, modaller
+├── apps.json           Tüm uygulama verisi — bu dosyayı düzenle
+├── logo.svg            Favicon
+├── update-stats.sh     GitHub yıldız/fork sayılarını günceller
+└── CNAME               GitHub Pages için özel domain
+```
+
+## Geliştirme
 
 ```bash
-git clone https://github.com/f/appetit.git
-cd appetit
+git clone https://github.com/emrahyurttutan/my-apps.git
+cd my-apps
 python3 -m http.server 8080
 ```
 
-Open [localhost:8080](http://localhost:8080) and you're running.
+[localhost:8080](http://localhost:8080) adresinden çalıştır.
 
-## Make It Yours
+## Yeni Uygulama Eklemek
 
-### 1. Add your apps
-
-Edit `apps.json`. Each app entry supports:
+`apps.json` dosyasını düzenle:
 
 ```jsonc
 {
-  "id": "my-app",
-  "name": "My App",
-  "subtitle": "A short tagline",
-  "description": "One-liner for list views.",
-  "longDescription": "Full description for the detail page.",
-  "icon": "https://example.com/icon.png",   // or use iconEmoji: "🚀"
-  "iconStyle": { "scale": 1.3, "objectFit": "cover", "borderRadius": "22%" },
-  "category": ["macos", "cli"],
-  "platform": "macOS",
+  "id": "app-id",
+  "name": "Uygulama Adı",
+  "subtitle": "Kısa açıklama",
+  "description": "Liste görünümü için tek satır.",
+  "longDescription": "Detay sayfası için tam açıklama.",
+  "icon": "https://example.com/icon.png",
+  "iconStyle": { "objectFit": "cover", "borderRadius": "22%" },
+  "category": ["education"],
+  "platform": "iOS & Android",
   "price": "Free",
-  "github": "https://github.com/you/my-app",
-  "homepage": "https://my-app.dev",
-  "language": "Swift",
-  "stars": 42,
-  "forks": 3,
-  "brew": "brew install you/tap/my-app",    // shows install modal
-  "installCommand": "npx my-app",           // alternative install modal
-  "downloadUrl": "https://github.com/you/my-app/releases/latest",
-  "requirements": "macOS 15+",
-  "features": ["Feature one", "Feature two"],
-  "screenshots": ["https://example.com/screenshot.png"]
+  "language": "Swift / Kotlin",
+  "requirements": "iOS 15+ or Android 8+",
+  "links": [
+    {
+      "label": "App Store",
+      "url": "https://apps.apple.com/...",
+      "platform": "ios",
+    },
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/...",
+      "platform": "android",
+    },
+  ],
+  "features": ["Özellik 1", "Özellik 2"],
 }
 ```
 
-### 2. Configure categories
+## Deploy
 
-```json
-"categories": [
-  { "id": "macos", "name": "macOS Apps" },
-  { "id": "cli", "name": "CLI Tools" },
-  { "id": "web", "name": "Web Apps" }
-]
-```
+GitHub Actions otomatik olarak `master` branch'ine push yapıldığında [apps.yurttutan.net](https://apps.yurttutan.net) adresine deploy eder.
 
-### 3. Set featured apps
-
-```json
-"featured": [
-  {
-    "id": "my-app",
-    "headline": "NEW",
-    "title": "A catchy headline.",
-    "subtitle": "A longer description for the featured banner."
-  }
-]
-```
-
-### 4. Deploy
-
-Push to GitHub and enable Pages — or drop the files on any static host (Netlify, Vercel, Cloudflare Pages, S3, etc).
-
-## Update GitHub Stats
-
-Fetch live star and fork counts from the GitHub API:
-
-```bash
-./update-stats.sh
-```
-
-For higher rate limits:
-
-```bash
-GITHUB_TOKEN=ghp_xxx ./update-stats.sh
-```
-
-## File Structure
-
-```
-├── index.html          Main HTML shell
-├── style.css           All styles (dark + light themes)
-├── app.js              Routing, rendering, carousel, modals
-├── apps.json           All app data — edit this file
-├── logo.svg            App icon / favicon
-├── update-stats.sh     Fetches GitHub stars/forks into apps.json
-├── CNAME               Custom domain for GitHub Pages
-└── .nojekyll           Prevents Jekyll processing
-```
-
-## Deploy to GitHub Pages
-
-1. Push to a GitHub repo
-2. Settings → Pages → Source: branch `master`, folder `/`
-3. *(Optional)* Add a `CNAME` file with your custom domain
-
-## License
+## Lisans
 
 MIT
