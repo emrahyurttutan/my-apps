@@ -1,6 +1,9 @@
 (function () {
   var saved = localStorage.getItem("theme");
-  if (!saved) saved = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  if (!saved)
+    saved = window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "light"
+      : "dark";
   document.documentElement.setAttribute("data-theme", saved);
 })();
 
@@ -16,12 +19,15 @@
 
   const icons = {
     discover: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
-    macos: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
     web: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
     "developer-tools": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
-    cli: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>`,
+    utilities: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+    productivity: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`,
+    lifestyle: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    "health-fitness": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    entertainment: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="5 3 19 12 5 21 5 3"/></svg>`,
     games: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="3"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="4" y1="12" x2="8" y2="12"/><circle cx="16" cy="10" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/></svg>`,
-    productivity: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>`,
+    education: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
     github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>`,
   };
 
@@ -85,6 +91,16 @@
     return `<span class="star-count"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>${formatNumber(stars)}</span>`;
   }
 
+  function platformIcon(platform) {
+    if (platform === "ios") {
+      return `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`;
+    }
+    if (platform === "android") {
+      return `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A7.93 7.93 0 0 0 12 1a7.93 7.93 0 0 0-3.14.63L7.38.16c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.3 1.3A7.97 7.97 0 0 0 4 9h16a7.97 7.97 0 0 0-4.47-6.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>`;
+    }
+    return `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+  }
+
   function isPaidApp(app) {
     return app.price && app.price !== "Free" && app.price !== "free";
   }
@@ -95,7 +111,13 @@
 
   function getButtonLabel(app) {
     if (isPaidApp(app)) return app.price;
+    if (app.links && app.links.length > 0) return "Get";
     if (app.brew || app.downloadUrl || app.installCommand) return "Get";
+    if (
+      app.category &&
+      (app.category.includes("games") || app.category.includes("entertainment"))
+    )
+      return "Get";
     return "View";
   }
 
@@ -127,7 +149,7 @@
         <div class="card-image">
           <div class="card-image-bg" style="background:linear-gradient(135deg, ${g[0]}, ${g[1]}, ${g[2]})">
             ${screenshotImg}
-            <div class="card-icon-fallback">${app.icon ? `<img src="${app.icon}" style="width:80px;height:80px;border-radius:18px;${iconStyle(app)}" onerror="this.outerHTML='📦'">` : (app.iconEmoji || "📦")}</div>
+            <div class="card-icon-fallback">${app.icon ? `<img src="${app.icon}" style="width:80px;height:80px;border-radius:18px;${iconStyle(app)}" onerror="this.outerHTML='📦'">` : app.iconEmoji || "📦"}</div>
           </div>
         </div>
         <div class="card-body">
@@ -141,9 +163,7 @@
   // Sidebar
   function buildSidebar() {
     const nav = $("#sidebarNav");
-    const items = [
-      { id: "discover", name: "Discover", icon: icons.discover },
-    ];
+    const items = [{ id: "discover", name: "Discover", icon: icons.discover }];
 
     let html = "";
     items.forEach((item) => {
@@ -156,12 +176,15 @@
     html += `<div class="nav-section-label">Categories</div>`;
 
     const categories = [
-      { id: "macos", name: "macOS Apps", icon: icons.macos },
-      { id: "web", name: "Web Apps", icon: icons.web },
-      { id: "developer-tools", name: "Developer Tools", icon: icons["developer-tools"] },
-      { id: "cli", name: "CLI Apps", icon: icons.cli },
       { id: "productivity", name: "Productivity", icon: icons.productivity },
-      { id: "games", name: "Games", icon: icons.games },
+      { id: "lifestyle", name: "Lifestyle", icon: icons.lifestyle },
+      {
+        id: "health-fitness",
+        name: "Health & Fitness",
+        icon: icons["health-fitness"],
+      },
+      { id: "education", name: "Education", icon: icons.education },
+      { id: "entertainment", name: "Entertainment", icon: icons.entertainment },
     ];
 
     categories.forEach((cat) => {
@@ -186,7 +209,9 @@
           <div class="featured-label">${f.headline}</div>
           <div class="featured-title">${f.title}</div>
           <div class="featured-subtitle">${f.subtitle}</div>
-          ${app ? `
+          ${
+            app
+              ? `
           <div class="featured-app-row">
             <div class="featured-app-icon"${iconContainerStyle(app)}>${renderIcon(app)}</div>
             <div class="featured-app-info">
@@ -194,7 +219,9 @@
               <div class="featured-app-sub">${app.subtitle}</div>
             </div>
             <button class="featured-get-btn${isPaidApp(app) ? " buy-btn" : ""}" data-action="get" data-app="${app.id}">${getButtonLabel(app)}</button>
-          </div>` : ""}
+          </div>`
+              : ""
+          }
         </div>
       </div>`;
   }
@@ -202,15 +229,29 @@
   // Discover Page
   function renderDiscover() {
     const apps = data.apps;
-    const featuredList = Array.isArray(data.featured) ? data.featured : [data.featured];
+    const featuredList = Array.isArray(data.featured)
+      ? data.featured
+      : [data.featured];
 
-    const macosApps = apps.filter((a) => a.category.includes("macos"));
+    const educationApps = apps.filter((a) => a.category.includes("education"));
     const devApps = apps.filter((a) => a.category.includes("developer-tools"));
+    const utilityApps = apps.filter((a) => a.category.includes("utilities"));
+    const productivityApps = apps.filter((a) =>
+      a.category.includes("productivity"),
+    );
+    const lifestyleApps = apps.filter((a) => a.category.includes("lifestyle"));
+    const healthApps = apps.filter((a) =>
+      a.category.includes("health-fitness"),
+    );
+    const entertainmentApps = apps.filter((a) =>
+      a.category.includes("entertainment"),
+    );
     const gameApps = apps.filter((a) => a.category.includes("games"));
 
-    const dots = featuredList.length > 1
-      ? `<div class="carousel-dots">${featuredList.map((_, i) => `<button class="carousel-dot${i === 0 ? " active" : ""}" data-slide="${i}"></button>`).join("")}</div>`
-      : "";
+    const dots =
+      featuredList.length > 1
+        ? `<div class="carousel-dots">${featuredList.map((_, i) => `<button class="carousel-dot${i === 0 ? " active" : ""}" data-slide="${i}"></button>`).join("")}</div>`
+        : "";
 
     let html = `
       <div class="carousel">
@@ -225,7 +266,10 @@
           <h2>Best New Apps and Updates</h2>
         </div>
         <div class="app-list">
-          ${apps.slice(0, 6).map((a) => appRow(a)).join("")}
+          ${apps
+            .slice(0, 6)
+            .map((a) => appRow(a))
+            .join("")}
         </div>
       </div>
 
@@ -248,21 +292,30 @@
           <h2>The Latest Must-Try Apps</h2>
         </div>
         <div class="cards-grid">
-          ${apps.slice(0, 4).map((a, i) => appCard(a, i)).join("")}
+          ${apps
+            .slice(0, 4)
+            .map((a, i) => appCard(a, i))
+            .join("")}
         </div>
       </div>
 
-      ${macosApps.length > 0 ? `
+      ${
+        educationApps.length > 0
+          ? `
       <div class="section">
         <div class="section-header">
-          <h2>macOS Apps</h2>
+          <h2>Education</h2>
         </div>
         <div class="app-list">
-          ${macosApps.map((a) => appRow(a)).join("")}
+          ${educationApps.map((a) => appRow(a)).join("")}
         </div>
-      </div>` : ""}
+      </div>`
+          : ""
+      }
 
-      ${devApps.length > 0 ? `
+      ${
+        devApps.length > 0
+          ? `
       <div class="section">
         <div class="section-header">
           <h2>Developer Tools</h2>
@@ -270,9 +323,83 @@
         <div class="app-list">
           ${devApps.map((a) => appRow(a)).join("")}
         </div>
-      </div>` : ""}
+      </div>`
+          : ""
+      }
 
-      ${gameApps.length > 0 ? `
+      ${
+        utilityApps.length > 0
+          ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Utilities</h2>
+        </div>
+        <div class="app-list">
+          ${utilityApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>`
+          : ""
+      }
+
+      ${
+        productivityApps.length > 0
+          ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Productivity</h2>
+        </div>
+        <div class="app-list">
+          ${productivityApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>`
+          : ""
+      }
+
+      ${
+        lifestyleApps.length > 0
+          ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Lifestyle</h2>
+        </div>
+        <div class="app-list">
+          ${lifestyleApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>`
+          : ""
+      }
+
+      ${
+        healthApps.length > 0
+          ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Health & Fitness</h2>
+        </div>
+        <div class="app-list">
+          ${healthApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>`
+          : ""
+      }
+
+      ${
+        entertainmentApps.length > 0
+          ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Entertainment</h2>
+        </div>
+        <div class="app-list">
+          ${entertainmentApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>`
+          : ""
+      }
+
+      ${
+        gameApps.length > 0
+          ? `
       <div class="section">
         <div class="section-header">
           <h2>Games</h2>
@@ -280,7 +407,9 @@
         <div class="app-list">
           ${gameApps.map((a) => appRow(a)).join("")}
         </div>
-      </div>` : ""}
+      </div>`
+          : ""
+      }
     `;
 
     return html;
@@ -326,12 +455,32 @@
             <div class="app-detail-title">${app.name}</div>
             <div class="app-detail-subtitle">${app.subtitle}</div>
             <div class="app-detail-actions">
-              <button class="app-detail-get-btn${isPaidApp(app) ? " buy-btn" : ""}" data-action="get" data-app="${app.id}">
-                ${getButtonLabel(app)}
-              </button>
-              <a href="${app.github}" target="_blank" rel="noopener" class="github-link">
+              ${
+                app.links && app.links.length > 0
+                  ? `<div class="get-dropdown-wrapper">
+                    <button class="app-detail-get-btn" data-action="get-dropdown" data-app="${app.id}">Get</button>
+                    <div class="get-dropdown" id="get-dropdown-${app.id}">
+                      ${app.links
+                        .map(
+                          (link) => `
+                        <a class="get-dropdown-item" href="${link.url}" target="_blank" rel="noopener">
+                          <span class="get-dropdown-icon">${platformIcon(link.platform)}</span>
+                          <span class="get-dropdown-label">${link.label}</span>
+                          <svg class="get-dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                        </a>`,
+                        )
+                        .join("")}
+                    </div>
+                  </div>`
+                  : `<button class="app-detail-get-btn${isPaidApp(app) ? " buy-btn" : ""}" data-action="get" data-app="${app.id}">${getButtonLabel(app)}</button>`
+              }
+              ${
+                app.github
+                  ? `<a href="${app.github}" target="_blank" rel="noopener" class="github-link">
                 ${icons.github} View on GitHub
-              </a>
+              </a>`
+                  : ""
+              }
             </div>
           </div>
         </div>
@@ -344,28 +493,38 @@
           <div class="stat"><div class="stat-value">${app.language}</div><div class="stat-label">Language</div></div>
         </div>
 
-        ${app.screenshots && app.screenshots.length > 0 ? `
+        ${
+          app.screenshots && app.screenshots.length > 0
+            ? `
         <div class="detail-section">
           <h3>Preview</h3>
           <div class="screenshots-scroll">
             ${app.screenshots.map((s) => `<img class="screenshot-img" src="${s}" alt="${app.name} screenshot" loading="lazy">`).join("")}
           </div>
-        </div>` : ""}
+        </div>`
+            : ""
+        }
 
         <div class="detail-section">
           <h3>Description</h3>
           <p>${app.longDescription || app.description}</p>
         </div>
 
-        ${app.features && app.features.length > 0 ? `
+        ${
+          app.features && app.features.length > 0
+            ? `
         <div class="detail-section">
           <h3>What's New</h3>
           <ul class="features-list">
             ${app.features.map((f) => `<li>${f}</li>`).join("")}
           </ul>
-        </div>` : ""}
+        </div>`
+            : ""
+        }
 
-        ${app.brew ? `
+        ${
+          app.brew
+            ? `
         <div class="detail-section">
           <div class="brew-section">
             <div class="brew-section-title">Install with Homebrew</div>
@@ -375,9 +534,13 @@
               <span class="copy-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
             </div>
           </div>
-        </div>` : ""}
+        </div>`
+            : ""
+        }
 
-        ${app.installCommand ? `
+        ${
+          app.installCommand
+            ? `
         <div class="detail-section">
           <div class="brew-section">
             <div class="brew-section-title">Quick Install</div>
@@ -387,7 +550,9 @@
               <span class="copy-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
             </div>
           </div>
-        </div>` : ""}
+        </div>`
+            : ""
+        }
 
         <div class="detail-section">
           <h3>Information</h3>
@@ -408,15 +573,23 @@
               <span class="info-label">Price</span>
               <span class="info-value">${app.price}</span>
             </div>
-            <div class="info-item">
+            ${
+              app.github
+                ? `<div class="info-item">
               <span class="info-label">Source Code</span>
               <span class="info-value"><a href="${app.github}" target="_blank" rel="noopener">${app.github.replace("https://github.com/", "")}</a></span>
-            </div>
-            ${app.homepage ? `
+            </div>`
+                : ""
+            }
+            ${
+              app.homepage
+                ? `
             <div class="info-item">
               <span class="info-label">Website</span>
               <span class="info-value"><a href="${app.homepage}" target="_blank" rel="noopener">${app.homepage.replace("https://", "")}</a></span>
-            </div>` : ""}
+            </div>`
+                : ""
+            }
           </div>
         </div>
       </div>`;
@@ -430,7 +603,7 @@
         a.name.toLowerCase().includes(q) ||
         a.subtitle.toLowerCase().includes(q) ||
         a.description.toLowerCase().includes(q) ||
-        (a.features && a.features.some((f) => f.toLowerCase().includes(q)))
+        (a.features && a.features.some((f) => f.toLowerCase().includes(q))),
     );
 
     if (results.length === 0) {
@@ -468,7 +641,10 @@
   }
 
   function navigate(view, appId, fromHash) {
-    if (carouselTimer) { clearInterval(carouselTimer); carouselTimer = null; }
+    if (carouselTimer) {
+      clearInterval(carouselTimer);
+      carouselTimer = null;
+    }
     const scroll = $("#contentScroll");
     scroll.scrollTop = 0;
 
@@ -530,7 +706,10 @@
         <button class="btn-primary" data-action="copy-and-close" data-copy="${command}">Copy Command</button>
         ${app.downloadUrl ? `<a class="btn-secondary" href="${app.downloadUrl}" target="_blank" rel="noopener">${app.downloadUrl.endsWith(".dmg") || app.downloadUrl.includes(".dmg") ? "Download .dmg" : "Download"}</a>` : ""}
       </div>
-      ${app.downloadUrl && (app.downloadUrl.endsWith(".dmg") || app.downloadUrl.includes(".dmg")) ? `
+      ${
+        app.downloadUrl &&
+        (app.downloadUrl.endsWith(".dmg") || app.downloadUrl.includes(".dmg"))
+          ? `
       <div style="margin-top:14px;font-size:12px;color:var(--text-tertiary);line-height:1.5">
         If macOS blocks the app on first launch, run:
         <div class="brew-command" style="margin-top:8px;font-size:12px;padding:8px 12px" data-copy="xattr -cr /Applications/${app.name}.app">
@@ -538,14 +717,19 @@
           <span class="cmd">xattr -cr /Applications/${app.name}.app</span>
           <span class="copy-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
         </div>
-      </div>` : ""}
+      </div>`
+          : ""
+      }
     `;
 
     overlay.style.display = "flex";
     requestAnimationFrame(() => overlay.classList.add("visible"));
 
     overlay.onclick = (e) => {
-      if (e.target === overlay || e.target.closest("[data-action='close-modal']")) {
+      if (
+        e.target === overlay ||
+        e.target.closest("[data-action='close-modal']")
+      ) {
         closeModal();
       }
       if (e.target.closest("[data-copy]")) {
@@ -553,7 +737,8 @@
         copyToClipboard(cmd);
       }
       if (e.target.closest("[data-action='copy-and-close']")) {
-        const cmd = e.target.closest("[data-action='copy-and-close']").dataset.copy;
+        const cmd = e.target.closest("[data-action='copy-and-close']").dataset
+          .copy;
         copyToClipboard(cmd);
         closeModal();
       }
@@ -590,7 +775,48 @@
     requestAnimationFrame(() => overlay.classList.add("visible"));
 
     overlay.onclick = (e) => {
-      if (e.target === overlay || e.target.closest("[data-action='close-modal']")) {
+      if (
+        e.target === overlay ||
+        e.target.closest("[data-action='close-modal']")
+      ) {
+        closeModal();
+      }
+    };
+  }
+
+  function showLinksModal(app) {
+    const overlay = $("#modalOverlay");
+    const modal = $("#modal");
+
+    modal.innerHTML = `
+      <button class="modal-close" data-action="close-modal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-icon"${iconContainerStyle(app)}>${renderIcon(app)}</div>
+      <h3>${app.name}</h3>
+      <p>Choose your platform to download ${app.name}.</p>
+      <div class="modal-platform-links">
+        ${app.links
+          .map(
+            (link) => `
+          <a class="modal-platform-link" href="${link.url}" target="_blank" rel="noopener">
+            <span class="modal-platform-icon">${platformIcon(link.platform)}</span>
+            <span class="modal-platform-label">${link.label}</span>
+            <svg class="modal-platform-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>`,
+          )
+          .join("")}
+      </div>
+    `;
+
+    overlay.style.display = "flex";
+    requestAnimationFrame(() => overlay.classList.add("visible"));
+
+    overlay.onclick = (e) => {
+      if (
+        e.target === overlay ||
+        e.target.closest("[data-action='close-modal']")
+      ) {
         closeModal();
       }
     };
@@ -623,6 +849,8 @@
       el.dataset.boundNav = "1";
       el.addEventListener("click", (e) => {
         if (e.target.closest("[data-action='get']")) return;
+        if (e.target.closest("[data-action='get-dropdown']")) return;
+        if (e.target.closest(".get-dropdown")) return;
         if (e.target.closest("a")) return;
         navigate(currentView, el.dataset.app);
       });
@@ -638,13 +866,29 @@
         if (!app) return;
         if (isPaidApp(app)) {
           showBuyModal(app);
+        } else if (app.links && app.links.length >= 1) {
+          showLinksModal(app);
         } else if (app.brew || app.installCommand) {
           showBrewModal(app);
-        } else if (app.homepage) {
-          window.open(app.homepage, "_blank");
-        } else {
+        } else if (app.homepage || app.downloadUrl) {
+          window.open(app.homepage || app.downloadUrl, "_blank");
+        } else if (app.github) {
           window.open(app.github, "_blank");
         }
+      });
+    });
+
+    $$("[data-action='get-dropdown']").forEach((btn) => {
+      if (btn.dataset.boundGetDropdown) return;
+      btn.dataset.boundGetDropdown = "1";
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const appId = btn.dataset.app;
+        const dropdown = document.getElementById("get-dropdown-" + appId);
+        if (!dropdown) return;
+        const isOpen = dropdown.classList.contains("open");
+        $$(".get-dropdown.open").forEach((d) => d.classList.remove("open"));
+        if (!isOpen) dropdown.classList.add("open");
       });
     });
 
@@ -698,19 +942,28 @@
     let touchDeltaX = 0;
     let dragging = false;
 
-    track.addEventListener("touchstart", (e) => {
-      touchStartX = e.touches[0].clientX;
-      touchDeltaX = 0;
-      dragging = true;
-      track.style.transition = "none";
-    }, { passive: true });
+    track.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchDeltaX = 0;
+        dragging = true;
+        track.style.transition = "none";
+      },
+      { passive: true },
+    );
 
-    track.addEventListener("touchmove", (e) => {
-      if (!dragging) return;
-      touchDeltaX = e.touches[0].clientX - touchStartX;
-      const offset = -(current * 100) + (touchDeltaX / track.offsetWidth) * 100;
-      track.style.transform = `translateX(${offset}%)`;
-    }, { passive: true });
+    track.addEventListener(
+      "touchmove",
+      (e) => {
+        if (!dragging) return;
+        touchDeltaX = e.touches[0].clientX - touchStartX;
+        const offset =
+          -(current * 100) + (touchDeltaX / track.offsetWidth) * 100;
+        track.style.transform = `translateX(${offset}%)`;
+      },
+      { passive: true },
+    );
 
     track.addEventListener("touchend", () => {
       if (!dragging) return;
@@ -761,11 +1014,17 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         closeModal();
+        $$(".get-dropdown.open").forEach((d) => d.classList.remove("open"));
         if (currentApp) navigate(currentView);
       }
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
         $("#searchInput").focus();
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".get-dropdown-wrapper")) {
+        $$(".get-dropdown.open").forEach((d) => d.classList.remove("open"));
       }
     });
   }
@@ -803,11 +1062,11 @@
     if (!menuBtn || !backBtn) return;
 
     if (currentApp) {
-      menuBtn.classList.add("hidden");
-      backBtn.classList.remove("hidden");
+      menuBtn.style.display = "none";
+      backBtn.style.display = "flex";
     } else {
-      menuBtn.classList.remove("hidden");
-      backBtn.classList.add("hidden");
+      menuBtn.style.display = "flex";
+      backBtn.style.display = "none";
     }
   }
 
@@ -816,7 +1075,6 @@
     const backBtn = $("#mobileBackBtn");
     const sidebar = $("#sidebar");
     const overlay = $("#sidebarOverlay");
-    const scroll = $("#contentScroll");
     if (!menuBtn || !sidebar || !overlay) return;
 
     menuBtn.addEventListener("click", () => {
@@ -832,25 +1090,6 @@
     backBtn.addEventListener("click", () => {
       navigate(currentView);
     });
-
-    let lastScrollY = 0;
-    let fadeTimer = null;
-    scroll.addEventListener("scroll", () => {
-      const y = scroll.scrollTop;
-      if (y > lastScrollY && y > 60) {
-        menuBtn.classList.add("faded");
-        backBtn.classList.add("faded");
-      } else {
-        menuBtn.classList.remove("faded");
-        backBtn.classList.remove("faded");
-      }
-      lastScrollY = y;
-      clearTimeout(fadeTimer);
-      fadeTimer = setTimeout(() => {
-        menuBtn.classList.remove("faded");
-        backBtn.classList.remove("faded");
-      }, 1500);
-    }, { passive: true });
   }
 
   function bindThemeToggle() {

@@ -1,532 +1,401 @@
 {
   "$schema": "https://wvw.dev/apps.schema.json",
   "store": {
-    "name": "Appétit",
-    "developer": "Fatih Kadir Akin",
-    "tagline": "Bon appétit for apps.",
-    "url": "https://apps.fka.dev",
-    "github": "https://github.com/f"
+    "name": "My Apps",
+    "developer": "Emrah Yurttutan",
+    "tagline": "Mobile apps built with passion.",
+    "url": "https://yurttutan.net",
+    "github": "https://github.com/emrahyurttutan"
   },
   "featured": [
     {
-      "id": "textream",
-      "headline": "NEW APP",
-      "title": "Your script, always in sight.",
-      "subtitle": "Textream brings a Dynamic Island teleprompter to your Mac — highlighting words as you speak them."
+      "id": "ehliyet",
+      "headline": "3500+ RATINGS · 4.6 ★",
+      "title": "Ace your driving exam.",
+      "subtitle": "Thousands of past exam questions, mock tests, and traffic signs — all in your pocket."
     },
     {
-      "id": "prompts-chat",
-      "headline": "151K+ STARS",
-      "title": "The world's largest prompt collection.",
-      "subtitle": "Share, discover, and collect AI prompts from the community. Free, open source, and self-hostable."
+      "id": "kpss",
+      "headline": "7100+ RATINGS · 4.4 ★",
+      "title": "KPSS hazırlık kolaylaştı.",
+      "subtitle": "Deneme sınavları, güncel bilgiler ve çıkmış sorular ile KPSS'ye hazırlan."
     }
   ],
   "categories": [
     {
-      "id": "all",
-      "name": "All Apps"
+      "id": "education",
+      "name": "Education"
     },
     {
-      "id": "macos",
-      "name": "macOS Apps"
+      "id": "lifestyle",
+      "name": "Lifestyle"
     },
     {
-      "id": "web",
-      "name": "Web Apps"
-    },
-    {
-      "id": "developer-tools",
-      "name": "Developer Tools"
-    },
-    {
-      "id": "cli",
-      "name": "CLI Apps"
+      "id": "health-fitness",
+      "name": "Health & Fitness"
     },
     {
       "id": "productivity",
       "name": "Productivity"
     },
     {
-      "id": "games",
-      "name": "Games"
+      "id": "entertainment",
+      "name": "Entertainment"
     }
   ],
   "apps": [
     {
-      "id": "textream",
-      "name": "Textream",
-      "subtitle": "A Free macOS Teleprompter",
-      "description": "Textream is a free, open-source macOS app that guides you through your script with three modes: word tracking (highlights each word as you say it), classic (constant-speed auto-scroll), and voice-activated (scrolls while you speak, pauses when you're silent). It displays your text in a sleek Dynamic Island-style overlay at the top of your screen.",
-      "longDescription": "Built for streamers, interviewers, presenters, and podcasters. Paste your script, hit play, and start speaking. Features include real-time word tracking with on-device speech recognition, a Dynamic Island overlay, floating window mode, fullscreen on Sidecar iPad, remote connection for viewing on any device, and Director Mode for live control. Supports PowerPoint notes import, multi-page scripts, and adjustable fonts and colors. Completely private — all processing happens on-device.",
-      "icon": "https://raw.githubusercontent.com/f/textream/master/Textream/Textream/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+      "id": "ehliyet",
+      "name": "Ehliyet Sınav Soruları",
+      "subtitle": "Sürücü Belgesi Sınavı Hazırlık",
+      "description": "2026 yılına ait çıkmış ehliyet sınav sorularını çözerek kendinizi sınava hazırlayın. MEB sistemine göre güncel deneme sınavları, trafik levhaları ve ders notları.",
+      "longDescription": "2013'ten bu yana çıkmış tüm ehliyet sınav sorularını içeren kapsamlı hazırlık uygulaması. Son 5 yılın tüm sınav sorularını kapsar. 2016'da değişen sınav sistemine uygun deneme sınavları ve puanlama sistemi — 70 baraj geçti/kaldı grafiği ile takip edin. Reklamsız, hızlı ve güncel sorular. Ders notları ile birlikte tam hazırlık cebinizde.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/03/2a/f6/032af692-9463-dc94-a4df-386172446451/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "iconStyle": {
-        "scale": 1.3,
         "objectFit": "cover",
         "borderRadius": "22%"
       },
-      "category": [
-        "macos",
-        "productivity"
-      ],
-      "platform": "macOS",
+      "category": ["education"],
+      "platform": "iOS & Android",
       "price": "Free",
-      "github": "https://github.com/f/textream",
-      "homepage": "https://textream.fka.dev",
-      "language": "Swift",
-      "stars": 2023,
-      "forks": 143,
-      "brew": "brew install f/textream/textream",
-      "downloadUrl": "https://github.com/f/textream/releases/latest",
-      "requirements": "macOS 15 Sequoia or later",
+      "github": null,
+      "homepage": "https://appaflytech.com",
+      "language": "Swift / Kotlin",
+      "requirements": "iOS 15.1+ or Android 8+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/ehliyet-s%C4%B1nav-sorular%C4%B1-2026-1/id1435728653",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.emrahyurttutan.quizappp",
+          "platform": "android"
+        }
+      ],
       "features": [
-        "Real-time word tracking with on-device speech recognition",
-        "Dynamic Island-style overlay",
-        "Classic auto-scroll and voice-activated modes",
-        "Remote connection via local network",
-        "Director Mode for live control",
-        "PowerPoint notes import",
-        "External display & Sidecar support"
-      ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/f/textream/master/docs/video.gif"
-      ]
-    },
-    {
-      "id": "agentlytics",
-      "name": "Agentlytics",
-      "subtitle": "AI Coding Agent Analytics",
-      "description": "Comprehensive analytics dashboard for AI coding agents — Cursor, Windsurf, Claude Code, VS Code Copilot, Zed, Antigravity, OpenCode, Command Code. One command to turn scattered AI conversations into a unified analytics dashboard.",
-      "longDescription": "You switch between Cursor, Windsurf, Claude Code, VS Code Copilot, and more — each with its own siloed conversation history. Agentlytics gives you a full picture with one command: npx agentlytics. Dashboard with KPIs, activity heatmap, editor breakdown, coding streaks, token economy. Session search and full conversation replay. Cost estimation broken down by model, editor, project. Team context sharing via Relay with MCP integration. 100% local — no data ever leaves your machine.",
-      "icon": "https://raw.githubusercontent.com/f/agentlytics/master/docs/logo.svg",
-      "iconStyle": {
-        "scale": 0.9,
-        "objectFit": "contain",
-        "bgColor": "#000000"
-      },
-      "category": [
-        "developer-tools",
-        "cli",
-        "web"
-      ],
-      "platform": "Node.js",
-      "price": "Free",
-      "github": "https://github.com/f/agentlytics",
-      "homepage": "https://agentlytics.io",
-      "language": "JavaScript",
-      "stars": 339,
-      "forks": 34,
-      "installCommand": "npx agentlytics",
-      "requirements": "Node.js 20.19+ or 22.12+, macOS",
-      "features": [
-        "Supports 16 AI coding editors",
-        "Dashboard with KPIs and activity heatmaps",
-        "Session search with syntax highlighting",
-        "Cost estimation by model and editor",
-        "Team relay with MCP integration",
-        "Deno sandboxed edition available",
-        "100% local — no data leaves your machine"
-      ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/f/agentlytics/master/docs/screenshot.png"
-      ]
-    },
-    {
-      "id": "deeper",
-      "name": "Deeper",
-      "subtitle": "Messaging Analytics for Beeper",
-      "description": "A macOS messaging analytics app for Beeper — visualize your conversations across every platform, with on-device AI. See who you talk to most, discover your active hours, find ghosting patterns, explore group dynamics.",
-      "longDescription": "Deeper connects to your local Beeper Desktop app and turns your messaging data into beautiful, interactive analytics. It merges contacts across platforms (iMessage, WhatsApp, Instagram, Telegram, Signal, X/Twitter, and more), analyzes sent vs received message patterns, and visualizes everything with native macOS charts and Liquid Glass effects. Uses Apple Intelligence (on-device) for conversation summaries — no cloud, no API keys. All data stays on your machine.",
-      "icon": "https://raw.githubusercontent.com/f/deeper/main/icon.svg",
-      "iconStyle": {
-        "scale": 1,
-        "objectFit": "contain",
-        "bgColor": "#1c1c1e"
-      },
-      "category": [
-        "macos",
-        "productivity"
-      ],
-      "platform": "macOS",
-      "price": "Free",
-      "github": "https://github.com/f/deeper",
-      "homepage": null,
-      "language": "Swift",
-      "stars": 59,
-      "forks": 6,
-      "brew": "brew install f/tap/deeper",
-      "downloadUrl": "https://github.com/f/deeper/releases/latest",
-      "requirements": "macOS 26 Tahoe or later, Beeper Desktop",
-      "features": [
-        "Cross-platform contact merging",
-        "Ghosting pattern detection",
-        "Apple Intelligence on-device summaries",
-        "Response time analytics",
-        "Group dynamics and platform breakdown",
-        "Word frequency analysis and word clouds",
-        "Liquid Glass UI with native macOS 26 design"
-      ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/f/deeper/main/docs/screenshot.png"
-      ]
-    },
-    {
-      "id": "shelf",
-      "name": "Shelf",
-      "subtitle": "Multiple Floating Docks for macOS",
-      "description": "Multiple floating shelves for apps, links, and snippets — right where you need them. Your macOS dock, powered up. One dock isn't enough.",
-      "longDescription": "Shelf gives you multiple floating shelves you can place anywhere on your screen — each one holding apps, web links, and text snippets. Like your macOS dock, but unlimited. Drag apps from Finder, links from your browser, or text from anywhere. Features smart drag & drop, horizontal or vertical layouts, icon magnification on hover, and frosted glass design. Built with SwiftUI and AppKit — no Electron, no web views. Pure macOS.",
-      "icon": "https://raw.githubusercontent.com/f/shelf/master/Shelf/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
-      "iconStyle": {
-        "scale": 1.3,
-        "objectFit": "cover",
-        "borderRadius": "22%"
-      },
-      "category": [
-        "macos",
-        "productivity"
-      ],
-      "platform": "macOS",
-      "price": "Free",
-      "github": "https://github.com/f/shelf",
-      "homepage": null,
-      "language": "Swift",
-      "stars": 29,
-      "forks": 3,
-      "brew": "brew install f/shelf/shelf",
-      "downloadUrl": "https://github.com/f/shelf/releases/latest",
-      "requirements": "macOS 15 Sequoia or later",
-      "features": [
-        "Multiple floating shelves",
-        "Apps, links, snippets, spacers, separators",
-        "Smart drag & drop",
-        "Horizontal or vertical layout",
-        "Icon magnification on hover",
-        "Frosted glass native design",
-        "Menu bar app — no Dock icon clutter"
+        "2026 güncel çıkmış sınav soruları",
+        "MEB sistemine uygun deneme sınavları",
+        "Geçti/Kaldı grafiği ile performans takibi",
+        "Trafik levhaları rehberi",
+        "Ehliyet ders notları",
+        "Reklamsız premium seçeneği",
+        "Belçika ehliyet sınavı desteği"
       ],
       "screenshots": []
     },
     {
-      "id": "istanbul",
-      "name": "Istanbul",
-      "subtitle": "Ambient Istanbul Soundscapes",
-      "description": "A macOS menu bar app for ambient Istanbul soundscapes from BBC Rewind. 18 ambient recordings captured on location across Istanbul — perfect as background white noise for focus or relaxation.",
-      "longDescription": "Istanbul is a free, open-source macOS menu bar app that plays ambient sounds recorded in Istanbul on a continuous loop. Featuring 18 recordings from the BBC Rewind Sound Effects library: street atmosphere, spice market, covered bazaar, café backgammon, ferry crossings, Hagia Sophia interior, Blue Mosque, and more. Sounds download as MP3 on first play and are cached locally for offline use. Native Swift/SwiftUI — no Electron, no runtime dependencies.",
-      "icon": "https://raw.githubusercontent.com/f/istanbul/main/Istanbul/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+      "id": "kpss",
+      "name": "KPSS Deneme Sınavları",
+      "subtitle": "KPSS 2025 Hazırlık & Güncel Bilgiler",
+      "description": "KPSS deneme sınav soruları ve güncel bilgiler. Geçmiş sınavlardan oluşan sorularla kendinizi test edin, güncel bilgiler kısmından bilgilerinizi güncelleyin.",
+      "longDescription": "Uygulama aracılığı ile KPSS'ye hazırlanmak çok daha kolay. 2025 KPSS Güncel Bilgiler I, II ve III içerikleri, Türkiye'nin Milli Savunma Projeleri ve çıkmış sınav soruları tek uygulamada. Premium üyelik ile reklamsız ve tam içerik erişimi.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e5/0a/b7/e50ab702-fa37-c0a9-3a19-eaf40ab341bc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "iconStyle": {
-        "scale": 1.3,
         "objectFit": "cover",
         "borderRadius": "22%"
       },
-      "category": [
-        "macos"
-      ],
-      "platform": "macOS",
+      "category": ["education"],
+      "platform": "iOS & Android",
       "price": "Free",
-      "github": "https://github.com/f/istanbul",
-      "homepage": null,
-      "language": "Swift",
-      "stars": 15,
-      "forks": 4,
-      "brew": "brew install f/tap/istanbul",
-      "downloadUrl": "https://github.com/f/istanbul/releases/latest",
-      "requirements": "macOS 14 Sonoma or later",
+      "github": null,
+      "homepage": "https://4myazilim.com",
+      "language": "Swift / Kotlin",
+      "requirements": "iOS 15.1+ or Android 8+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/kpss-2025-deneme-s%C4%B1navlar%C4%B1-%C3%A7%C3%B6z/id1482779937",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.emrahyurttutan.kpssapp",
+          "platform": "android"
+        }
+      ],
       "features": [
-        "18 authentic Istanbul ambient recordings",
-        "BBC Rewind Sound Effects library",
-        "Menu bar only — clean and minimal",
-        "One-click play with continuous loop",
-        "Volume control in popover",
-        "Offline cache after first download",
-        "Native Swift/SwiftUI"
+        "2025 KPSS Güncel Bilgiler (I, II, III)",
+        "Türkiye Milli Savunma Projeleri",
+        "Geçmiş sınav soruları bankası",
+        "Deneme sınavları ve performans grafiği",
+        "Premium reklamsız deneyim",
+        "Aylık ve yıllık abonelik seçenekleri"
       ],
       "screenshots": []
     },
     {
-      "id": "prompts-chat",
-      "name": "Prompts.chat",
-      "subtitle": "Community Prompt Collection",
-      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-      "longDescription": "The largest community-driven prompt collection with over 151K GitHub stars. Originally known as Awesome ChatGPT Prompts, now evolved into a full web application. Browse, search, and contribute prompts for ChatGPT, Claude, Gemini, and other AI models. Features include community contributions, prompt categories, and the ability to self-host for your organization with complete privacy. Built with Next.js and TypeScript.",
-      "icon": "https://raw.githubusercontent.com/f/prompts.chat/main/public/logo-dark.svg",
+      "id": "tarih",
+      "name": "Tarih Altın Bilgiler",
+      "subtitle": "KPSS, YKS, LGS Tarih Soruları",
+      "description": "Tarih meraklıları için testler hazırladık. KPSS, YKS, LGS gibi sınavlarda başarılı olacaksınız. Tarih Kartları ile tüm tarihe hakim olacaksın.",
+      "longDescription": "Tarih sınavı için çözümlü testler ve sorular çözerek kendinizi test edebilirsiniz. Tüm soruları çöz ve rakiplerinden bir adım öne geç. Yüzlerce tarih sorusunu çözerek başarıya ulaşabilirsiniz. Uygulamada yer alan konular: İlk Türk Devletleri, Osmanlı Kültür ve Medeniyet (Kuruluş, Yükselme, Gerileme, Dağılma), Trablusgarp ve Balkan Savaşları, I. Dünya Savaşı, İnkılaplar, Kurtuluş Savaşı, Atatürk'ün Hayatı, Milli Mücadele, Cumhuriyet Dönemi, Çağdaş Türk ve Dünya Tarihi.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6f/a9/45/6fa94501-8c61-76d2-52da-43b5fd50e6f9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "iconStyle": {
-        "scale": 0.9,
-        "objectFit": "contain",
-        "bgColor": "#000000",
-        "padding": "18%"
+        "objectFit": "cover",
+        "borderRadius": "22%"
       },
-      "category": [
-        "web",
-        "developer-tools"
-      ],
-      "platform": "Web",
+      "category": ["education"],
+      "platform": "iOS & Android",
       "price": "Free",
-      "github": "https://github.com/f/prompts.chat",
-      "homepage": "https://prompts.chat",
-      "language": "TypeScript",
-      "stars": 152934,
-      "forks": 20113,
-      "requirements": "Any modern browser",
-      "features": [
-        "151K+ GitHub stars",
-        "Community-driven prompt collection",
-        "Works with ChatGPT, Claude, Gemini",
-        "Self-hostable with full privacy",
-        "Built with Next.js and TypeScript",
-        "Open source and free",
-        "Active community contributions"
+      "github": null,
+      "homepage": "https://4myazilim.com/app/tarih/",
+      "language": "Swift / Kotlin",
+      "requirements": "iOS 15.1+ or Android 8+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/tarih-alt%C4%B1n-bilgiler/id1497468191",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.sorucoz.tarih",
+          "platform": "android"
+        }
       ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/f/prompts.chat/main/public/og.png"
-      ]
-    },
-    {
-      "id": "check-ai",
-      "name": "check-ai",
-      "subtitle": "AI-Readiness Audit for Repos",
-      "description": "Audit any repository for AI-readiness. One command. 66 checks. Zero dependencies. Scans for agent configs, repo hygiene, grounding docs, testing safety nets, prompt templates, MCP integrations, AI dependencies — and scores it all on a 0–10 scale.",
-      "longDescription": "check-ai runs 66 checks grouped into 8 sections: Repo Hygiene, Grounding Docs, Testing Safety Net, Agent Configs, AI Context, Prompts & Skills, MCP integrations, and AI Dependencies. Each check is weighted by real-world impact and normalized to a 0–10 score with letter grades. Detects configs for Cursor, Windsurf, Claude Code, GitHub Copilot, Codex, Gemini, Aider, and more. Interactive terminal output with animated score bars, or machine-readable JSON for CI pipelines. Zero dependencies — built entirely with Node.js built-ins.",
-      "icon": "https://raw.githubusercontent.com/f/check-ai/main/logo.svg",
-      "iconStyle": {
-        "scale": 1.3,
-        "objectFit": "contain",
-        "bgColor": "#000000"
-      },
-      "category": [
-        "cli",
-        "developer-tools"
-      ],
-      "platform": "Node.js",
-      "price": "Free",
-      "github": "https://github.com/f/check-ai",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 56,
-      "forks": 4,
-      "installCommand": "npx check-ai",
-      "requirements": "Node.js 18+",
       "features": [
-        "66 checks across 8 categories",
-        "0–10 score with letter grades",
-        "Detects 20+ AI tool configs",
-        "Interactive animated terminal output",
-        "JSON output for CI pipelines",
-        "Zero dependencies",
-        "Works offline — pure static analysis"
+        "KPSS, YKS, LGS tarih soruları",
+        "2000'den fazla soru bankası",
+        "Konu özetleri ve Tarih Kartları",
+        "İnkılaplar, Osmanlı, Cumhuriyet dönemi konuları",
+        "Favoriler ve performans takibi",
+        "Premium reklamsız deneyim"
       ],
       "screenshots": []
     },
     {
-      "id": "mcptools",
-      "name": "MCP Tools",
-      "subtitle": "Swiss Army Knife for MCP Servers",
-      "description": "A comprehensive CLI for interacting with MCP (Model Context Protocol) servers. Discover, call, and manage tools, resources, and prompts from any MCP-compatible server.",
-      "longDescription": "MCP Tools provides a versatile CLI for working with Model Context Protocol servers. Discover and call tools, access resources, create mock servers for testing, proxy MCP requests to shell scripts, create interactive shells, scaffold new MCP projects with TypeScript, and guard/restrict access to specific tools. Supports HTTP and stdio transports, multiple output formats (JSON, pretty-printed, table), server aliases, and LLM app config management. Built in Go.",
-      "icon": "https://raw.githubusercontent.com/f/mcptools/master/.github/resources/logo.png",
-      "iconStyle": {
-        "scale": 0.85,
-        "objectFit": "contain",
-        "bgColor": "#ffffff"
-      },
-      "category": [
-        "cli",
-        "developer-tools"
-      ],
-      "platform": "CLI",
-      "price": "Free",
-      "github": "https://github.com/f/mcptools",
-      "homepage": null,
-      "language": "Go",
-      "stars": 1523,
-      "forks": 116,
-      "brew": "brew install f/mcptools/mcp",
-      "requirements": "macOS, Linux, or Windows",
-      "features": [
-        "Discover and call MCP server tools",
-        "Mock server mode for testing",
-        "Proxy and Guard modes",
-        "Interactive shell for exploring servers",
-        "Web interface for MCP servers",
-        "Project scaffolding with TypeScript",
-        "Homebrew install on macOS"
-      ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/f/mcptools/master/.github/resources/screenshot.png",
-        "https://raw.githubusercontent.com/f/mcptools/master/.github/resources/web-interface.png"
-      ]
-    },
-    {
-      "id": "git-rewrite-commits",
-      "name": "git-rewrite-commits",
-      "subtitle": "AI-Powered Commit Message Rewriter",
-      "description": "AI-powered git commit message rewriter using Ollama or GPT. Automatically rewrite your entire git commit history with better, conventional commit messages.",
-      "longDescription": "Rewrite your entire git commit history with AI-generated conventional commit messages. Perfect for cleaning up messy histories before open-sourcing projects. Supports OpenAI GPT and local Ollama models for privacy. Features smart filtering to skip well-formed commits, multi-language support, git hooks integration for automatic messages on every commit, batch processing with rate limiting, dry-run mode, custom templates, and quality scoring. Always creates backups before rewriting.",
-      "icon": null,
-      "iconEmoji": "✍️",
+      "id": "prayer-times",
+      "name": "Prayer Times & Qibla",
+      "subtitle": "Namaz Vakitleri, Kıble & Kuran",
+      "description": "Konum tabanlı namaz vakitleri, kıble pusulası, Kuran-ı Kerim, ezan bildirimleri ve tam Ramazan desteği ile tüm ihtiyaçlarınız tek uygulamada.",
+      "longDescription": "GPS konumunuza göre otomatik hesaplanan namaz vakitleri, 30 günlük aylık takvim, sonraki namaza geri sayım. Özelleştirilebilir ezan bildirimleri, erken hatırlatıcı, cami modu. Her namazı kaydedin, serilerinizi takip edin. Gerçek zamanlı mıknatıs sensörü ile hassas kıble pusulası. 114 surenin tamamı, Arapça metin, okunuş ve tercüme. Hicri takvim ve Ramazan'da İmsak/İftar bildirimleri.",
+      "iconEmoji": "🕌",
       "iconStyle": {},
-      "category": [
-        "cli",
-        "developer-tools"
-      ],
-      "platform": "Node.js",
+      "category": ["lifestyle"],
+      "platform": "iOS & Android",
       "price": "Free",
-      "github": "https://github.com/f/git-rewrite-commits",
-      "homepage": "https://blog.fka.dev/git-rewrite-commits/",
-      "language": "TypeScript",
-      "stars": 1385,
-      "forks": 56,
-      "installCommand": "npx git-rewrite-commits",
-      "requirements": "Node.js, Git",
-      "features": [
-        "AI-powered conventional commit messages",
-        "OpenAI GPT or local Ollama support",
-        "Git hooks for automatic messages",
-        "Dry-run mode to preview changes",
-        "Multi-language commit messages",
-        "Custom templates and quality scoring",
-        "Safe operation with automatic backups"
+      "github": null,
+      "homepage": "https://4myazilim.com/app/prayer-times/",
+      "language": "Swift / Kotlin",
+      "requirements": "iOS 15+ or Android 8+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/app/id6450932588",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.emrahyurttutan.iftar",
+          "platform": "android"
+        }
       ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/f/git-rewrite-commits/master/git-rewrite-commits.png"
-      ]
-    },
-    {
-      "id": "appetit",
-      "name": "Appétit",
-      "subtitle": "Bon Appétit for Apps",
-      "description": "An Apple App Store-inspired catalog of free, tiny apps built with agentic engineering and vibecoding. Pure HTML/CSS/JS — no frameworks, no build step.",
-      "longDescription": "Appétit is an open-source, JSON-driven app store clone that showcases your projects in a beautiful, browsable catalog. Features a dark/light theme, sidebar navigation, featured carousel, app detail pages with screenshots, brew/npx install modals, instant search, and GitHub star counts. All content lives in a single apps.json file — edit it and deploy. Built entirely with vanilla HTML, CSS, and JS using agentic engineering and vibecoding. No frameworks, no build step, deploys anywhere as static files.",
-      "icon": "https://raw.githubusercontent.com/f/appetit/master/logo.svg",
-      "iconStyle": {
-        "objectFit": "cover"
-      },
-      "category": [
-        "web"
-      ],
-      "platform": "Web",
-      "price": "Free",
-      "github": "https://github.com/f/appetit",
-      "homepage": "https://apps.fka.dev",
-      "language": "JavaScript",
-      "stars": 31,
-      "forks": 6,
-      "requirements": "Any modern browser",
       "features": [
-        "Apple App Store-inspired UI",
-        "JSON-driven — all content from apps.json",
-        "Dark and light theme with system preference",
-        "Featured carousel, app cards, detail pages",
-        "Brew / npx install modals with clipboard copy",
-        "Zero dependencies — pure HTML/CSS/JS",
-        "Built with agentic engineering and vibecoding"
+        "GPS tabanlı hassas namaz vakitleri",
+        "Sonraki namaza geri sayım",
+        "Özelleştirilebilir ezan bildirimleri & cami modu",
+        "Namaz takibi ve seri istatistikleri",
+        "Gerçek zamanlı kıble pusulası",
+        "114 sure — Arapça, okunuş ve tercüme",
+        "Tam Ramazan desteği (İmsak/İftar)"
       ],
       "screenshots": []
     },
     {
-      "id": "galaksinin-muhafizlari",
-      "developer": "Asaf Akin",
-      "name": "Galaksinin Muhafızları",
-      "subtitle": "Galaksiyi Koru, Muhafızlarını Topla!",
-      "description": "A browser-based space action game. Defend the galaxy, collect guardians, upgrade your weapons, and fight through waves of enemies.",
-      "longDescription": "Galaksinin Muhafızları is a browser-based space action game built with pure HTML/CSS/JS. Use WASD to move, mouse to aim, and click to shoot. Features include a leveling system, in-game shop with upgrades (Mega Attack, Super Health, Light Speed, Titan Armor, Extra Ammo), the ability to summon knights, super powers, and life-steal mechanics. Fight through increasingly difficult waves, upgrade your guardian, and save the galaxy from darkness.",
-      "icon": null,
-      "iconEmoji": "🚀",
+      "id": "efsun",
+      "name": "Efsun: Kahve Falı & Rüya",
+      "subtitle": "AI Kahve Falı ve Rüya Tabiri",
+      "description": "Yapay zeka ile kahve fincanı fal analizi ve rüya tabiri. Burç enerjinize göre kişiselleştirilmiş yorumlar ve günlük mistik mesajlar.",
+      "longDescription": "Fincanınızın fotoğrafını çekin ve yapay zekaya yorumlatın — aşk, kariyer, para ve sağlık analizleri. Kısa veya detaylı yorum seçeneği. Rüya tabiri için sadece rüyanızı yazın, klasik yorumların ötesinde psikolojik ve mistik yorum alın. Burç işaretinize göre kişiselleştirilmiş deneyim. Günlük motivasyon bildirimleri. Not: Bu uygulama yalnızca eğlence amaçlıdır.",
+      "iconEmoji": "🔮",
       "iconStyle": {},
-      "category": [
-        "games",
-        "web"
-      ],
-      "platform": "Web",
+      "category": ["lifestyle", "entertainment"],
+      "platform": "iOS & Android",
       "price": "Free",
-      "github": "https://github.com/asafakin/oyun",
-      "homepage": "https://asafakin.github.io/oyun/savas-oyunu/",
-      "language": "JavaScript",
-      "stars": 4,
-      "forks": 0,
-      "requirements": "Any modern browser",
+      "github": null,
+      "homepage": "https://4myazilim.com",
+      "language": "Flutter",
+      "requirements": "iOS 15+ or Android 8+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/app/id6450932588",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.appasoft.efsunkfrt",
+          "platform": "android"
+        }
+      ],
       "features": [
-        "WASD movement + mouse aiming",
-        "Wave-based enemy combat",
-        "In-game shop with 8 upgrades",
-        "Summon knight companions",
-        "Super power abilities",
-        "Leveling and progression system",
-        "Pure HTML/CSS/JS — no dependencies"
+        "AI destekli kahve fincanı fal analizi",
+        "Kısa veya detaylı yorum seçeneği",
+        "Rüya tabiri — psikolojik & mistik",
+        "Burç bazlı kişiselleştirilmiş deneyim",
+        "Günlük mistik motivasyon bildirimleri",
+        "Sevdiklerinizin falını da bak"
       ],
       "screenshots": []
     },
     {
-      "id": "wvw-desktop",
-      "name": "World Vibe Web",
-      "subtitle": "The distributed app store, on your desktop",
-      "description": "A native desktop app for wvw.dev — browse, discover, and install vibe-coded open-source apps from across GitHub without opening a browser.",
-      "longDescription": "World Vibe Web desktop brings the full wvw.dev experience to your menu bar. Browse the community-curated catalog of open-source apps, read reviews, view screenshots, and install via Homebrew or direct download — all from a native window with macOS title bar integration. External links open in your default browser. Built with Tauri and Rust for a lightweight, fast experience. Available for macOS (Apple Silicon & Intel), Windows, and Linux.",
-      "icon": "https://raw.githubusercontent.com/f/wvw.dev/master/logo.png",
+      "id": "kadin-sagligi",
+      "name": "Kadın Sağlığı & Güvenlik",
+      "subtitle": "Sağlık & Güvenlik Asistanın",
+      "description": "Adet takvimi, gebelik takibi, annelik modu, kişisel sağlık araçları ve panik butonu dahil güvenlik özellikleri — tek uygulamada.",
+      "longDescription": "Regl takvimi ve döngü analizi, PMS & semptom kaydı, ovülasyon tahmini. Hafta hafta gebelik gelişimi, trimester bilgilendirme, beslenme önerileri. Emzirme ve bebek bakım takibi. İlaç & vitamin hatırlatma, su & adım takibi, ruh hali günlüğü. Panik butonu, güvenli/tehlikeli bölge haritası, acil durum kişileri ve otomatik konum paylaşımı.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/8b/a2/f78ba272-53a0-8bcb-5441-d65e42460d50/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "iconStyle": {
-        "scale": 1.3,
         "objectFit": "cover",
         "borderRadius": "22%"
       },
-      "category": [
-        "macos",
-        "utilities"
-      ],
-      "platform": "macOS",
+      "category": ["health-fitness", "lifestyle"],
+      "platform": "iOS",
       "price": "Free",
-      "github": "https://github.com/f/wvw.dev-app",
-      "homepage": "https://wvw.dev",
-      "language": "Rust",
-      "stars": 5,
-      "forks": 0,
-      "brew": "brew install f/tap/wvw",
-      "downloadUrl": "https://github.com/f/wvw.dev-app/releases/latest",
-      "requirements": "macOS 10.15+, Windows 10+, or Linux",
+      "github": null,
+      "homepage": "https://4myazilim.com/mobile-app/",
+      "language": "Swift / Kotlin",
+      "requirements": "iOS 15+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/kad%C4%B1n-sa%C4%9Fl%C4%B1%C4%9F%C4%B1-g%C3%BCvenlik/id6756342991",
+          "platform": "ios"
+        }
+      ],
       "features": [
-        "Native desktop app powered by Tauri",
-        "Browse the full wvw.dev catalog",
-        "Available for macOS, Windows, and Linux",
-        "Lightweight — no Electron, built with Rust",
-        "Auto-updated from wvw.dev"
+        "Adet & döngü takibi, ovülasyon tahmini",
+        "Hafta hafta gebelik gelişimi",
+        "Emzirme & bebek bakım modu",
+        "Panik butonu & acil durum kişileri",
+        "Güvenli/tehlikeli bölge haritası",
+        "İlaç, vitamin & doğum kontrol takibi",
+        "Nefes egzersizleri & ruh hali günlüğü"
       ],
       "screenshots": []
     },
     {
-      "id": "prompts-chat-book",
-      "name": "The Interactive Book of Prompting",
-      "subtitle": "An Interactive Guide to AI Prompts",
-      "description": "A comprehensive interactive guide to crafting clear and effective AI prompts — from foundations to advanced techniques like chain-of-thought, few-shot learning, and agentic systems.",
-      "longDescription": "Written by Fatih Kadir Akın, curator of the 151K+ star Awesome ChatGPT Prompts repository. This interactive book covers how AI models think and process prompts, crafting clear and specific prompts, advanced techniques including chain-of-thought, few-shot learning, and prompt chaining, plus real-world use cases for writing, coding, education, and business. Features 25 interactive chapters with examples you can try directly in the browser. Continuously updated as AI evolves.",
-      "icon": "https://public-files.gumroad.com/hi3ruhodzjsspr6lg7h5if7hir9g",
+      "id": "bitki-sulama",
+      "name": "Bitki Sulama: Bakım ve Takip",
+      "subtitle": "Çiçek Sulama Hatırlatıcısı",
+      "description": "Bitkileriniz için akıllı sulama hatırlatıcıları, bakım takvimi ve gelişim günlüğü. Kaktüsten orkideye kadar tüm bitkilerinizi canlı tutun.",
+      "longDescription": "Her bitki türü için özelleştirilmiş sulama alarmları, gübreleme ve saksı değişimi takibi. Bitkilerinizin büyüme sürecini fotoğraflarla kaydedin. Uygulamayı açmanıza gerek kalmadan bildirim alın. Sukulentlerden salon bitkilerine kadar geniş yelpaze desteği.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/26/82/bb2682c3-d1e9-daf1-f43c-a0366e293843/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "iconStyle": {
-        "scale": 1,
-        "objectFit": "contain",
-        "bgColor": "#000000",
-        "padding": "0"
+        "objectFit": "cover",
+        "borderRadius": "22%"
       },
-      "category": [
-        "productivity"
+      "category": ["lifestyle", "productivity"],
+      "platform": "iOS",
+      "price": "Free",
+      "github": null,
+      "homepage": "https://4myazilim.com/app/plant/",
+      "language": "Swift / Kotlin",
+      "requirements": "iOS 15+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/bitki-sulama-bak%C4%B1m-ve-takip/id6755485267",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.emrahyurttutan.plantapp",
+          "platform": "android"
+        }
       ],
-      "platform": "Web",
-      "price": "$20,00",
-      "github": "https://github.com/f/prompts.chat",
-      "homepage": "https://prompts.chat/book",
-      "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
-      "language": "TypeScript",
-      "stars": 152934,
-      "forks": 20113,
-      "requirements": "Any modern browser",
       "features": [
-        "25 interactive chapters",
-        "Chain-of-thought and few-shot learning techniques",
-        "Prompt chaining and agentic systems",
-        "Try examples directly in the browser",
-        "Real-world use cases for writing, coding, education",
-        "Continuously updated with new techniques",
-        "Available as PDF download"
+        "Her bitki için özelleştirilmiş sulama alarmları",
+        "Gübreleme, saksı değişimi ve budama takvimi",
+        "Fotoğraflı gelişim günlüğü",
+        "Uygulama açmadan bildirim",
+        "Geniş bitki türü desteği",
+        "Premium reklamsız deneyim"
       ],
-      "screenshots": [
-        "https://prompts.chat/_next/image?url=%2Fbook-cover-photo.jpg&w=3840&q=75&dpl=dpl_F29LRFNhru548nrCnC6hVC8tM36p"
-      ]
+      "screenshots": []
+    },
+    {
+      "id": "derdini-dok",
+      "name": "Derdini Dök",
+      "subtitle": "Anonim Paylaşım & Dertleşme",
+      "description": "Kimseye anlatamadıklarını özgürce anlat. Anonim kal, yargılanmadan dinlen, destek bul ve rahatla. Senin gibi hisseden binlerce kişi burada.",
+      "longDescription": "Tamamen anonim sosyal platform. Takma adını seç, derdini yaz, kategorini seç ve gönder. Topluluktan destek ve tavsiye al. Başkalarının dertlerini dinle, tecrübelerinle yol göster. Sade ve göz yormayan arayüz.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/9a/7c/299a7ca3-69bc-d5fc-3047-68bec3776a95/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "iconStyle": {
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
+      "category": ["lifestyle"],
+      "platform": "iOS",
+      "price": "Free",
+      "github": null,
+      "homepage": "https://4myazilim.com/mobile-app/",
+      "language": "Swift",
+      "requirements": "iOS 15+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/derdini-d%C3%B6k-anonim-payla%C5%9F%C4%B1m/id6755607825",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.appasoft.dert",
+          "platform": "android"
+        }
+      ],
+      "features": [
+        "Tamamen anonim — kimliğin gizli",
+        "Yargısız topluluk desteği",
+        "Kategori bazlı paylaşım",
+        "Yorum ve destek sistemi",
+        "Sade ve göz dostu arayüz",
+        "İlerleyen güncellemede sesli/görüntülü dertleşme"
+      ],
+      "screenshots": []
+    },
+    {
+      "id": "cizmeli-kedi",
+      "name": "Çizmeli Kedi Veteriner",
+      "subtitle": "Çekmeköy İstanbul Veteriner Kliniği",
+      "description": "Çizmeli Kedi Veteriner Kliniği resmi uygulaması. Acil veteriner, pet ambulans, pet otel, 7/24 destek ve randevu hizmetlerine tek tıkla ulaşın.",
+      "longDescription": "Çekmeköy'ün en donanımlı veteriner kliniğinin resmi uygulaması. Acil durum hattı ve Pet Ambulans'a tek dokunuşla ulaşın. WhatsApp destek hattı, yol tarifi, blog yazıları ve tüm hizmet rehberi cebinizde. Cerrahi, kısırlaştırma, diş bakımı, röntgen/ultrason ve dahiliye hizmetleri.",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/77/0a/a3/770aa349-c955-267e-ff27-ac468a5f446f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "iconStyle": {
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
+      "category": ["lifestyle"],
+      "platform": "iOS",
+      "price": "Free",
+      "github": null,
+      "homepage": "https://www.vetcizmelikedicekmekoy.com/",
+      "language": "Swift",
+      "requirements": "iOS 15+",
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/tr/app/%C3%A7izmeli-kedi-veteriner/id6759364103",
+          "platform": "ios"
+        },
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.appaflytech.cizmelikedi",
+          "platform": "android"
+        }
+      ],
+      "features": [
+        "7/24 acil veteriner hattı",
+        "Pet ambulans servisi",
+        "WhatsApp destek hattı",
+        "Tüm klinik hizmetleri rehberi",
+        "Uzman hekim kadrosu bilgileri",
+        "Blog: evcil hayvan bakım ipuçları",
+        "Kolay ulaşım & yol tarifi"
+      ],
+      "screenshots": []
     }
   ]
 }
