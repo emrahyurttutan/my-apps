@@ -176,6 +176,7 @@
     html += `<div class="nav-section-label">Categories</div>`;
 
     const categories = [
+      { id: "education", name: "Education", icon: icons.education },
       { id: "productivity", name: "Productivity", icon: icons.productivity },
       { id: "lifestyle", name: "Lifestyle", icon: icons.lifestyle },
       {
@@ -183,7 +184,6 @@
         name: "Health & Fitness",
         icon: icons["health-fitness"],
       },
-      { id: "education", name: "Education", icon: icons.education },
       { id: "entertainment", name: "Entertainment", icon: icons.entertainment },
     ];
 
@@ -491,6 +491,7 @@
           <div class="stat"><div class="stat-value">${app.price}</div><div class="stat-label">Price</div></div>
           <div class="stat"><div class="stat-value">${app.platform}</div><div class="stat-label">Platform</div></div>
           <div class="stat"><div class="stat-value">${app.language}</div><div class="stat-label">Language</div></div>
+
         </div>
 
         ${

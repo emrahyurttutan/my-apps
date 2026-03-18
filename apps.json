@@ -4,7 +4,7 @@
     "name": "My Apps",
     "developer": "Emrah Yurttutan",
     "tagline": "Mobile apps built with passion.",
-    "url": "https://yurttutan.net",
+    "url": "https://apps.yurttutan.net",
     "github": "https://github.com/emrahyurttutan"
   },
   "featured": [
@@ -212,18 +212,13 @@
       "iconEmoji": "🔮",
       "iconStyle": {},
       "category": ["lifestyle", "entertainment"],
-      "platform": "iOS & Android",
+      "platform": "Android",
       "price": "Free",
       "github": null,
       "homepage": "https://4myazilim.com",
       "language": "Flutter",
       "requirements": "iOS 15+ or Android 8+",
       "links": [
-        {
-          "label": "App Store",
-          "url": "https://apps.apple.com/app/id6450932588",
-          "platform": "ios"
-        },
         {
           "label": "Google Play",
           "url": "https://play.google.com/store/apps/details?id=com.appasoft.efsunkfrt",
@@ -288,7 +283,7 @@
         "borderRadius": "22%"
       },
       "category": ["lifestyle", "productivity"],
-      "platform": "iOS",
+      "platform": "iOS & Android",
       "price": "Free",
       "github": null,
       "homepage": "https://4myazilim.com/app/plant/",
@@ -328,7 +323,7 @@
         "borderRadius": "22%"
       },
       "category": ["lifestyle"],
-      "platform": "iOS",
+      "platform": "iOS & Android",
       "price": "Free",
       "github": null,
       "homepage": "https://4myazilim.com/mobile-app/",
